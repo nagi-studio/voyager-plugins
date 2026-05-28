@@ -1,8 +1,8 @@
 {
   "id": "voyager.claude-cjk-render-fix",
   "name": "Claude · CJK Render Fix",
-  "version": "1.0.0",
-  "description": "Fixes uneven CJK (Chinese·Japanese·Korean) font-weight rendering in Claude responses on macOS, caused by faux-bold synthesis on fonts that lack CJK glyphs.",
+  "version": "1.0.1",
+  "description": "Fixes uneven CJK (Chinese·Japanese·Korean) rendering in Claude responses on macOS, where some characters look noticeably thinner than others. Two causes compound: Claude's font stack lets Japanese/Traditional fonts grab some Simplified characters, and body text uses a non-standard weight (360) that CJK fonts lack. This pulls PingFang SC to the front of the CJK stack, normalizes plain text to a real 400, and disables weight synthesis — bold (strong) stays bold.",
   "author": "Nagi Studio",
   "category": "render-fix",
   "license": "MIT",
@@ -13,7 +13,7 @@
   "contributes": {
     "styles": [
       {
-        "css": "/* voyager.claude-cjk-render-fix — even CJK weight rendering on macOS */\n.standard-markdown,\n.standard-markdown * {\n  font-synthesis-weight: none !important;\n}"
+        "css": "/* voyager.claude-cjk-render-fix — even CJK rendering on macOS.\n * Two issues compound:\n * 1. Claude's CJK font stack lists Japanese/Traditional fonts (Hiragino,\n *    PingFang TC) before PingFang SC, so some Simplified characters\n *    (这/些/术/语…) get grabbed by them and render visibly thinner —\n *    the \"some thin, some normal\" effect.\n * 2. Body text is set to font-weight 360, a value CJK fallback fonts lack, so\n *    macOS synthesizes an uneven faux weight.\n * Fix: pull PingFang SC to the front of the CJK stack so Simplified text is\n * uniform, normalize plain body text to a real 400, and disable weight\n * synthesis. <strong> carries its own heavier weight, so bold stays bold. */\n.standard-markdown :where(p, li, ul, ol, blockquote, dd, dt, td, th),\n.font-claude-response-body {\n  font-family: \"Anthropic Serif\", Georgia, \"PingFang SC\", \"Hiragino Sans\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", sans-serif !important;\n  font-weight: 400 !important;\n  font-synthesis-weight: none !important;\n}"
       }
     ]
   }
