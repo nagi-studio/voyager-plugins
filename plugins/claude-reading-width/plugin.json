@@ -1,0 +1,30 @@
+{
+  "id": "voyager.claude-reading-width",
+  "name": "Claude · Comfortable Reading Width",
+  "version": "1.1.0",
+  "description": "Constrains Claude chat messages to a comfortable maximum reading width and centers them, so long lines don't sprawl across wide screens. The width is adjustable.",
+  "author": "Nagi Studio",
+  "category": "readability",
+  "license": "MIT",
+  "homepage": "https://github.com/nagi-studio/voyager-plugins/tree/main/plugins/claude-reading-width",
+  "engine": ">=1.1.0",
+  "tier": "declarative",
+  "matches": ["https://claude.ai/*"],
+  "contributes": {
+    "settings": {
+      "width": {
+        "type": "number",
+        "label": "Reading width (characters)",
+        "default": 70,
+        "min": 40,
+        "max": 120
+      }
+    },
+    "styles": [
+      {
+        "css": "/* voyager.claude-reading-width — comfortable, adjustable reading width */\n.gv-plugin-claude-readable [data-testid=\"user-message\"],\n.gv-plugin-claude-readable .font-claude-message {\n  max-width: {{width}}ch !important;\n  margin-left: auto !important;\n  margin-right: auto !important;\n}"
+      }
+    ],
+    "domOps": [{ "op": "addClass", "target": "body", "className": "gv-plugin-claude-readable" }]
+  }
+}

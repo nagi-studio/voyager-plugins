@@ -1,0 +1,20 @@
+{
+  "id": "voyager.claude-cjk-render-fix",
+  "name": "Claude · CJK Render Fix",
+  "version": "1.0.0",
+  "description": "Fixes uneven CJK (Chinese·Japanese·Korean) font-weight rendering in Claude responses on macOS, caused by faux-bold synthesis on fonts that lack CJK glyphs.",
+  "author": "Nagi Studio",
+  "category": "render-fix",
+  "license": "MIT",
+  "homepage": "https://github.com/nagi-studio/voyager-plugins/tree/main/plugins/claude-cjk-render-fix",
+  "engine": ">=1.0.0",
+  "tier": "declarative",
+  "matches": ["https://claude.ai/*"],
+  "contributes": {
+    "styles": [
+      {
+        "css": "/* voyager.claude-cjk-render-fix — even CJK weight rendering on macOS */\n.standard-markdown,\n.standard-markdown * {\n  font-synthesis-weight: none !important;\n}"
+      }
+    ]
+  }
+}
