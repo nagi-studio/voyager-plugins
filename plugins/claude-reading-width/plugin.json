@@ -3,6 +3,44 @@
   "name": "Claude · Comfortable Reading Width",
   "version": "1.2.0",
   "description": "Widen Claude's conversation to one centered, adjustable column, with user and assistant messages aligned together.",
+  "i18n": {
+    "zh": {
+      "name": "Claude · 舒适阅读宽度",
+      "description": "将 Claude 的对话拓宽为居中、可调节的单栏，用户与助手的消息统一左对齐。"
+    },
+    "zh_TW": {
+      "name": "Claude · 舒適閱讀寬度",
+      "description": "將 Claude 的對話拓寬為置中、可調整的單欄，使用者與助理的訊息統一靠左對齊。"
+    },
+    "ja": {
+      "name": "Claude · 快適な読書幅",
+      "description": "Claude の会話を中央寄せの調整可能な 1 カラムに広げ、ユーザーとアシスタントのメッセージを揃えて表示します。"
+    },
+    "ko": {
+      "name": "Claude · 편안한 읽기 너비",
+      "description": "Claude의 대화를 가운데 정렬된 조절 가능한 단일 열로 넓히고, 사용자와 어시스턴트 메시지를 같은 정렬로 맞춥니다."
+    },
+    "fr": {
+      "name": "Claude · Largeur de lecture confortable",
+      "description": "Élargit la conversation de Claude en une seule colonne centrée et ajustable, avec les messages de l'utilisateur et de l'assistant alignés ensemble."
+    },
+    "es": {
+      "name": "Claude · Ancho de lectura cómodo",
+      "description": "Amplía la conversación de Claude en una sola columna centrada y ajustable, con los mensajes del usuario y del asistente alineados juntos."
+    },
+    "pt": {
+      "name": "Claude · Largura de leitura confortável",
+      "description": "Amplia a conversa do Claude em uma única coluna centralizada e ajustável, com as mensagens do usuário e do assistente alinhadas juntas."
+    },
+    "ru": {
+      "name": "Claude · Удобная ширина чтения",
+      "description": "Расширяет диалог Claude до одной центрированной колонки с настраиваемой шириной, выравнивая сообщения пользователя и ассистента вместе."
+    },
+    "ar": {
+      "name": "Claude · عرض قراءة مريح",
+      "description": "يوسّع محادثة Claude إلى عمود واحد موسّط قابل للتعديل، مع محاذاة رسائل المستخدم والمساعد معًا."
+    }
+  },
   "author": "voyager-official",
   "category": "readability",
   "license": "MIT",

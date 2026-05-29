@@ -39,6 +39,26 @@ engine interprets the data. That makes plugins:
 `setAttribute`, `setStyle`. `target` is a CSS selector string (or a semantic key
 resolved by the site adapter). Injected classes must be `gv-` prefixed.
 
+## Localized name & description (optional)
+
+Add an optional top-level `i18n` object to translate `name` and `description`.
+Keys are Voyager's locale codes — `en ar es fr ja ko pt ru zh zh_TW` — and each
+value is `{ name?, description? }`. `en` is taken from the top-level fields, so
+you don't repeat it. Fallback is per-field: any missing locale or missing field
+falls back to the top-level English. The whole object (and any field within it)
+is optional.
+
+```jsonc
+{
+  "name": "Claude · CJK Render Fix",     // English fallback
+  "description": "Fixes uneven CJK text…",
+  "i18n": {
+    "zh": { "name": "Claude · 中日韩字体渲染修复", "description": "修复…" },
+    "ja": { "name": "Claude · CJK 表示崩れ修正", "description": "修正…" }
+  }
+}
+```
+
 ## Repository layout
 
 ```

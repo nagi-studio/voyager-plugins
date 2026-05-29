@@ -3,6 +3,44 @@
   "name": "ChatGPT · Comfortable Reading Width",
   "version": "1.0.0",
   "description": "Widen ChatGPT's conversation to one centered, adjustable column — drag the slider to fit your screen.",
+  "i18n": {
+    "zh": {
+      "name": "ChatGPT · 舒适阅读宽度",
+      "description": "将 ChatGPT 的对话拓宽为居中、可调节的单栏——拖动滑块即可适配你的屏幕。"
+    },
+    "zh_TW": {
+      "name": "ChatGPT · 舒適閱讀寬度",
+      "description": "將 ChatGPT 的對話拓寬為置中、可調整的單欄——拖動滑桿即可符合你的螢幕。"
+    },
+    "ja": {
+      "name": "ChatGPT · 快適な読書幅",
+      "description": "ChatGPT の会話を中央寄せの調整可能な 1 カラムに広げます。スライダーをドラッグして画面に合わせられます。"
+    },
+    "ko": {
+      "name": "ChatGPT · 편안한 읽기 너비",
+      "description": "ChatGPT의 대화를 가운데 정렬된 조절 가능한 단일 열로 넓힙니다. 슬라이더를 드래그해 화면에 맞추세요."
+    },
+    "fr": {
+      "name": "ChatGPT · Largeur de lecture confortable",
+      "description": "Élargit la conversation de ChatGPT en une seule colonne centrée et ajustable — faites glisser le curseur pour l'adapter à votre écran."
+    },
+    "es": {
+      "name": "ChatGPT · Ancho de lectura cómodo",
+      "description": "Amplía la conversación de ChatGPT en una sola columna centrada y ajustable: arrastra el control deslizante para ajustarla a tu pantalla."
+    },
+    "pt": {
+      "name": "ChatGPT · Largura de leitura confortável",
+      "description": "Amplia a conversa do ChatGPT em uma única coluna centralizada e ajustável — arraste o controle deslizante para ajustar à sua tela."
+    },
+    "ru": {
+      "name": "ChatGPT · Удобная ширина чтения",
+      "description": "Расширяет диалог ChatGPT до одной центрированной колонки с настраиваемой шириной — перетащите ползунок под размер вашего экрана."
+    },
+    "ar": {
+      "name": "ChatGPT · عرض قراءة مريح",
+      "description": "يوسّع محادثة ChatGPT إلى عمود واحد موسّط قابل للتعديل — اسحب شريط التمرير لتلائم شاشتك."
+    }
+  },
   "author": "voyager-official",
   "category": "readability",
   "license": "MIT",
