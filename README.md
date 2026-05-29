@@ -90,7 +90,10 @@ field within it) is optional.
         },
       },
     },
-    "ja": { "name": "Claude · 快適な読書幅", "description": "Claude の会話を…" },
+    "ja": {
+      "name": "Claude · 快適な読書幅",
+      "description": "Claude の会話を…",
+    },
   },
 }
 ```
