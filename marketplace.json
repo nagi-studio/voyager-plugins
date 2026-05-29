@@ -17,6 +17,11 @@
       "name": "claude-reading-width",
       "source": "plugins/claude-reading-width/plugin.json",
       "official": true
+    },
+    {
+      "name": "chatgpt-reading-width",
+      "source": "plugins/chatgpt-reading-width/plugin.json",
+      "official": true
     }
   ]
 }

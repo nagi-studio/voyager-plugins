@@ -1,0 +1,32 @@
+{
+  "id": "voyager.chatgpt-reading-width",
+  "name": "ChatGPT · Comfortable Reading Width",
+  "version": "1.0.0",
+  "description": "Gives ChatGPT one centered, adjustable reading column. ChatGPT caps every conversation turn and the composer at --thread-content-max-width (768px); this raises that cap so the whole thread and the input box share one wider, centered column. Default width matches ChatGPT's native width; the slider goes much wider for big screens.",
+  "author": "Nagi Studio",
+  "category": "readability",
+  "license": "MIT",
+  "homepage": "https://github.com/nagi-studio/voyager-plugins/tree/main/plugins/chatgpt-reading-width",
+  "engine": ">=1.1.0",
+  "tier": "declarative",
+  "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+  "contributes": {
+    "settings": {
+      "width": {
+        "type": "number",
+        "label": "Reading width (px)",
+        "default": 768,
+        "min": 600,
+        "max": 1600
+      }
+    },
+    "styles": [
+      {
+        "css": "/* voyager.chatgpt-reading-width — one wider, centered reading column.\n * ChatGPT sizes every conversation turn (and the composer) from the CSS var\n * --thread-content-max-width (48rem / 768px), consumed via Tailwind\n * max-w-(--thread-content-max-width). Raising both the variable and the\n * resolved max-width on those containers widens the column; they are mx-auto,\n * so they stay centered. The slider drives {{width}} (px). */\n.gv-plugin-chatgpt-readable [class*=\"--thread-content-max-width\"] {\n  --thread-content-max-width: {{width}}px !important;\n  max-width: {{width}}px !important;\n}"
+      }
+    ],
+    "domOps": [
+      { "op": "addClass", "target": "body", "className": "gv-plugin-chatgpt-readable" }
+    ]
+  }
+}
