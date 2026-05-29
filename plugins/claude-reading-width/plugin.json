@@ -1,8 +1,8 @@
 {
   "id": "voyager.claude-reading-width",
   "name": "Claude · Comfortable Reading Width",
-  "version": "1.1.1",
-  "description": "Constrains Claude chat messages to a comfortable maximum reading width and centers them, so long lines don't sprawl across wide screens. The width is adjustable.",
+  "version": "1.2.0",
+  "description": "Gives Claude one centered, adjustable reading column. Claude caps each turn at a fixed width and pins user messages to the right; this overrides that so user input, thinking, and the response all share one centered, equal-width column. Default width matches Claude's native width; the slider goes much wider for big screens.",
   "author": "Nagi Studio",
   "category": "readability",
   "license": "MIT",
@@ -14,15 +14,15 @@
     "settings": {
       "width": {
         "type": "number",
-        "label": "Reading width (characters)",
-        "default": 70,
-        "min": 40,
-        "max": 120
+        "label": "Reading width (px)",
+        "default": 768,
+        "min": 600,
+        "max": 1600
       }
     },
     "styles": [
       {
-        "css": "/* voyager.claude-reading-width — comfortable, adjustable reading width */\n.gv-plugin-claude-readable [data-testid=\"user-message\"],\n.gv-plugin-claude-readable .standard-markdown {\n  max-width: {{width}}ch !important;\n  margin-left: auto !important;\n  margin-right: auto !important;\n}"
+        "css": "/* voyager.claude-reading-width — one centered, adjustable reading column.\n * Claude caps each conversation turn at max-w-3xl (768px), which also makes a\n * per-turn .standard-markdown max-width ineffective (the parent wins). We set\n * the adjustable width on the turn containers themselves (user + assistant\n * alike); they are mx-auto, so they stay centered. We also flip the user\n * message from its right-aligned bubble (the items-end container) to\n * left-aligned, matching the assistant, so the whole thread reads as one\n * centered column of equal width. */\n.gv-plugin-claude-readable div[class*=\"max-w-3xl\"] {\n  max-width: {{width}}px !important;\n}\n.gv-plugin-claude-readable div[class*=\"items-end\"]:has([data-testid=\"user-message\"]) {\n  align-items: flex-start !important;\n}"
       }
     ],
     "domOps": [{ "op": "addClass", "target": "body", "className": "gv-plugin-claude-readable" }]
