@@ -3,7 +3,7 @@ id: voyager.claude-reading-width
 name: Claude · Comfortable Reading Width
 category: readability
 version: 1.2.0
-author: Nagi Studio
+author: voyager-official
 license: MIT
 matches:
   - https://claude.ai/*

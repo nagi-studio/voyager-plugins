@@ -3,7 +3,7 @@ id: voyager.chatgpt-reading-width
 name: ChatGPT · Comfortable Reading Width
 category: readability
 version: 1.0.0
-author: Nagi Studio
+author: voyager-official
 license: MIT
 matches:
   - https://chatgpt.com/*

@@ -3,7 +3,7 @@
   "name": "nagi-studio",
   "version": "1.0.0",
   "owner": {
-    "name": "Nagi Studio",
+    "name": "voyager-official",
     "url": "https://github.com/nagi-studio"
   },
   "description": "Official plugin marketplace for Voyager — declarative plugins that enhance AI chat sites (Claude, ChatGPT, …).",

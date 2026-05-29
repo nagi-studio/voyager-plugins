@@ -60,6 +60,6 @@ plugins/
 
 ## Licensing
 
-Official plugins in this repo are authored by Nagi Studio. Third-party plugins
+Official plugins in this repo are authored by voyager-official. Third-party plugins
 are owned by their authors under whatever license they choose — listing here does
 not change that.

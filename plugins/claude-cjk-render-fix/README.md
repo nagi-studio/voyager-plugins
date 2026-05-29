@@ -3,7 +3,7 @@ id: voyager.claude-cjk-render-fix
 name: Claude · CJK Render Fix
 category: render-fix
 version: 1.0.1
-author: Nagi Studio
+author: voyager-official
 license: MIT
 matches:
   - https://claude.ai/*
